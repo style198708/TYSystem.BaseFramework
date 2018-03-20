@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SqlSugar">
+      <HintPath>..\Lib\SqlSugar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /V &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Lib\&quot;" />
+  </Target>
+
+</Project>

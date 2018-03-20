@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TYSystem.BaseFramework.Extension\TYSystem.BaseFramework.Extension.csproj" />
+    <ProjectReference Include="..\TYSystem.BaseFramework.Helper\TYSystem.BaseFramework.Helper.csproj" />
+  </ItemGroup>
+
+</Project>

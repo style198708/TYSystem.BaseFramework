@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CookieHelper.cs" />
+    <Compile Remove="FileUpload\FileUploadHelper.cs" />
+    <Compile Remove="FileUpload\FileUploadInfo.cs" />
+    <Compile Remove="GraphicHelper.cs" />
+    <Compile Remove="ImagesHelper.cs" />
+    <Compile Remove="RandomHelper.cs" />
+    <Compile Remove="ValidationCodeHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TYSystem.BaseFramework.Encrypt\TYSystem.BaseFramework.Encrypt.csproj" />
+    <ProjectReference Include="..\TYSystem.BaseFramework.Extension\TYSystem.BaseFramework.Extension.csproj" />
+    <ProjectReference Include="..\TYSystem.BaseFramework.Serializer\TYSystem.BaseFramework.Serializer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FileUpload\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /V &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Lib\&quot;" />
+  </Target>
+
+</Project>

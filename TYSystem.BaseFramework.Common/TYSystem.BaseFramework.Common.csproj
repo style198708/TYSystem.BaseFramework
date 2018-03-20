@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /V &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Lib\&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TYSystem.BaseFramework.Configuration\TYSystem.BaseFramework.Configuration.csproj" />
+    <ProjectReference Include="..\TYSystem.BaseFramework.Serializer\TYSystem.BaseFramework.Serializer.csproj" />
+  </ItemGroup>
+
+</Project>
