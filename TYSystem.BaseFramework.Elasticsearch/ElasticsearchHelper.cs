@@ -1,66 +1,148 @@
-﻿using Elasticsearch.Net;
-using Nest;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Elasticsearch.Net;
+using Nest;
+using System.Linq;
+using System.Linq.Expressions;
+
 
 namespace TYSystem.BaseFramework.Elasticsearch
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class ElasticsearchHelper
     {
         private static ElasticClient Client { get; set; }
 
+        private static string IndexName { get; set; }
+
         static ElasticsearchHelper()
         {
-            var uri = new Uri("http://mynode.somewhere.com/");
-
-            //var connectionConfiguration = new ConnectionConfiguration()
-            //        .DisableAutomaticProxyDetection()
-            //        .EnableHttpCompression()
-            //        .DisableDirectStreaming()
-            //        .PrettyJson()
-            //        .RequestTimeout(TimeSpan.FromMinutes(2));
-            //var lowLevelClient = new ElasticLowLevelClient(connectionConfiguration);
-
-
-            //var connectionSettings = new ConnectionSettings(new Uri("http://192.168.126.132:9200"))
-            //      .DefaultMappingFor<ElasticsearchIndex>(i => i
-            //        .IndexName("my-projects")
-            //        .TypeName("project")
-            //       ).EnableDebugMode()
-            //    .PrettyJson()
-            //    .RequestTimeout(TimeSpan.FromMinutes(2));
-            var connSettings = new ConnectionSettings(new Uri("http://92.168.126.132:9200/"));
-             
-
-                Client = new ElasticClient(connSettings);
-
-            //var settings = new ConnectionSettings(uri, defaultIndex = "my-application");
-
+            //Config config = TYSystem.BaseFramework.Configuration.Config.Bind<Config>("Elasticsearch.json");
+            Config config = new Config()
+            {
+                ElasticsearchType = "Single",
+                ConfigUrl = "http://192.168.126.136:9200/"
+            };
+            if (Client == null)
+            {
+                ConnectionSettings connectionSettings = new ConnectionSettings();
+                if (config.ElasticsearchType == EnumElasticsearch.Single)
+                {
+                    connectionSettings = new ConnectionSettings(new Uri(config.ConfigUrl));
+                }
+                else if (config.ElasticsearchType == EnumElasticsearch.Multiple)
+                {
+                    StaticConnectionPool pool = new StaticConnectionPool(config.ConfigUrl.Split(",").Select(p => new Uri(p)).ToList());
+                    connectionSettings = new ConnectionSettings(pool);
+                }
+                else
+                {
+                    StaticConnectionPool pool = new StaticConnectionPool(config.ConfigUrl.Split(",").Select(p => new Node(new Uri(p))).ToList());
+                    connectionSettings = new ConnectionSettings(pool);
+                }
+                Client = new ElasticClient(connectionSettings);
+            }
         }
 
+        /// <summary>
+        /// 创建索引(数据库)
+        /// </summary>
+        private static void CreateIndex<T>() where T : ElasticsearchBase
+        {
+            if (string.IsNullOrWhiteSpace(IndexName))
+            {
+                IndexName = "db_" + typeof(T).Name.ToLower();
+            }
+
+            if (!Client.IndexExists(IndexName).Exists)
+            {
+                IIndexState indexState = new IndexState()
+                {
+                    Settings = new IndexSettings()
+                    {
+                        NumberOfReplicas = 1,//副本数
+                        NumberOfShards = 5//分片数
+                    }
+                };
+                //创建并Mapping
+                Client.CreateIndex(IndexName, p => p.InitializeUsing(indexState).Mappings(m => m.Map<T>(mp => mp.AutoMap())));
+            }
+        }
 
         /// <summary>
-        /// 创建索引
+        /// 新增数据
         /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
         /// <returns></returns>
-        public static bool CreateIndex()
+        public static bool Add<T>(T entity) where T : ElasticsearchBase
         {
-            ElasticsearchIndex index = new ElasticsearchIndex() { Name = "线吉林若天有叵地一", Age = 18 };
-            Client.CreateIndex("default", i => i.Mappings(m => m.Map<ElasticsearchIndex>(ms => ms.AutoMap())));
+            CreateIndex<T>();
+            Client.Index<T>(entity, o => o.Index(IndexName).Type<T>());
             return true;
         }
 
         /// <summary>
-        /// 查询索引
+        /// 修改数据
         /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
         /// <returns></returns>
-        public List<string> QueryIndex()
+        public static bool Update<T>(T entity) where T : ElasticsearchBase
         {
-            return null;
+            CreateIndex<T>();
+
+            DocumentPath<T> deletePath = new DocumentPath<T>(entity.IndexId);
+            IUpdateRequest<T, T> request = new UpdateRequest<T, T>(deletePath)
+            {
+                Doc = entity
+            };
+            var response = Client.Update<T, T>(request);
+            return true;
         }
+
+
+        /// <summary>
+        /// 获取单个实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static T GetByID<T>(long Id) where T : ElasticsearchBase
+        {
+            CreateIndex<T>();
+            var response = Client.Get(new DocumentPath<T>(Id), pd => pd.Index(IndexName).Type<T>());
+            return response.Source;
+        }
+
+        /// <summary>
+        /// 获取单个实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static List<T> GetByIDs<T>(List<long> Ids) where T : ElasticsearchBase
+        {
+            CreateIndex<T>();
+            var response = Client.MultiGet(m => m.Index(IndexName).GetMany<T>(Ids));
+            return response.Hits.Select(p => (T)p.Source).ToList();
+        }
+
+
+        #region 查询业务具体封装
+
+        /// <summary>
+        /// 前50条记录
+        /// 参照 https://www.cnblogs.com/huhangfei/p/5726650.html
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="func"></param>
+        /// <returns></returns>
+        public static ISearchResponse<T> Query<T>(Func<SearchDescriptor<T>, ISearchRequest> func) where T : ElasticsearchBase
+        {
+            return Client.Search<T>(s => s.Index(IndexName).From(0).Size(50));
+        }
+
+        #endregion
     }
 }
