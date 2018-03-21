@@ -9,5 +9,7 @@ namespace TYSystem.BaseFramework.Middleware
     /// </summary>
     public class MonitorMiddleware
     {
+
+
     }
 }

@@ -37,9 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Rabb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Configuration", "TYSystem.BaseFramework.Configuration\TYSystem.BaseFramework.Configuration.csproj", "{940376DD-2A8F-4A8F-979D-5D1E881BD2CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Middleware", "TYSystem.BaseFramework.Middleware\TYSystem.BaseFramework.Middleware.csproj", "{EE2AF1EA-D035-438F-B7F1-EF62BE342030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Middleware", "TYSystem.BaseFramework.Middleware\TYSystem.BaseFramework.Middleware.csproj", "{EE2AF1EA-D035-438F-B7F1-EF62BE342030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Elasticsearch", "TYSystem.BaseFramework.Elasticsearch\TYSystem.BaseFramework.Elasticsearch.csproj", "{2CCC594B-F430-42D4-BCAC-5306A9B69A4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Elasticsearch", "TYSystem.BaseFramework.Elasticsearch\TYSystem.BaseFramework.Elasticsearch.csproj", "{2CCC594B-F430-42D4-BCAC-5306A9B69A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.MongoDB", "TYSystem.BaseFramework.MongoDB\TYSystem.BaseFramework.MongoDB.csproj", "{E3133C7A-2B08-4F68-8E48-53008E0DC20F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{2CCC594B-F430-42D4-BCAC-5306A9B69A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CCC594B-F430-42D4-BCAC-5306A9B69A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CCC594B-F430-42D4-BCAC-5306A9B69A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3133C7A-2B08-4F68-8E48-53008E0DC20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3133C7A-2B08-4F68-8E48-53008E0DC20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3133C7A-2B08-4F68-8E48-53008E0DC20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3133C7A-2B08-4F68-8E48-53008E0DC20F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

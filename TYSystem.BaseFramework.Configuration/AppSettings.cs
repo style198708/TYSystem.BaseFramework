@@ -60,6 +60,8 @@ namespace TYSystem.BaseFramework.Configuration
         public string ConfigPath { get; set; }
 
         public string TableConfig { get; set; }
+
+        public string Mongodb { get; set; }
     }
 
     public class Logging
