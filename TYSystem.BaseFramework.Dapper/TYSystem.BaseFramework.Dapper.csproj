@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="6.10.6" />
+    <PackageReference Include="System.Data.OracleClient" Version="1.0.8" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TYSystem.BaseFramework.Configuration">
+      <HintPath>..\Lib\TYSystem.BaseFramework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="TYSystem.BaseFramework.Serializer">
+      <HintPath>..\Lib\TYSystem.BaseFramework.Serializer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
