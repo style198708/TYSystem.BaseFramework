@@ -9,7 +9,7 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
     /// <summary>
     /// The log4net logger class.
     /// </summary>
-    public class Log4NetLogger : ILogger
+    public class Log4NetLogger : ILogger 
     {
         /// <summary>
         /// The log.

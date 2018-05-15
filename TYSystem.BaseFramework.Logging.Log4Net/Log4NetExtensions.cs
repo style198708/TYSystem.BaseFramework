@@ -7,7 +7,7 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
     /// <summary>
     /// The log4net extensions class.
     /// </summary>
-    public static class Log4NetExtensions
+    public static class Log4NetExtensions 
     {
         /// <summary>
         /// The default log4net config file name.
