@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.DotNetty", "TYSystem.BaseFramework.DotNetty\TYSystem.BaseFramework.DotNetty.csproj", "{E2865AAD-E8BE-421D-99C5-892C0ABDEEB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Dapper", "TYSystem.BaseFramework.Dapper\TYSystem.BaseFramework.Dapper.csproj", "{1C01CBBD-8041-46AD-A414-35829CEF115B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Dapper", "TYSystem.BaseFramework.Dapper\TYSystem.BaseFramework.Dapper.csproj", "{1C01CBBD-8041-46AD-A414-35829CEF115B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Logging.Log4Net", "TYSystem.BaseFramework.Logging.Log4Net\TYSystem.BaseFramework.Logging.Log4Net.csproj", "{EEC9C7A5-35C2-471A-A3C0-562DFC9ED378}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC9C7A5-35C2-471A-A3C0-562DFC9ED378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC9C7A5-35C2-471A-A3C0-562DFC9ED378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC9C7A5-35C2-471A-A3C0-562DFC9ED378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC9C7A5-35C2-471A-A3C0-562DFC9ED378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
