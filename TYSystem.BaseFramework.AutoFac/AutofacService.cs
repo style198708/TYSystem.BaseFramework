@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Autofac.Extensions.DependencyInjection;
 using System.Linq;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace TYSystem.BaseFramework.AutoFac
 {
@@ -20,7 +21,9 @@ namespace TYSystem.BaseFramework.AutoFac
 
         public  IServiceProvider RegisterAutofac(IServiceCollection services, Assembly iface, Assembly service)
         {
+            services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
             var assembly = this.GetType().GetTypeInfo().Assembly;
+
 
             var manager = new ApplicationPartManager();
             manager.ApplicationParts.Add(new AssemblyPart(assembly));

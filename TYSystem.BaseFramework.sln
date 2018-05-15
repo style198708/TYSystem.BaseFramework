@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Dapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Logging.Log4Net", "TYSystem.BaseFramework.Logging.Log4Net\TYSystem.BaseFramework.Logging.Log4Net.csproj", "{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Logging.NLog", "TYSystem.BaseFramework.Logging.NLog\TYSystem.BaseFramework.Logging.NLog.csproj", "{B0C8C55A-42B7-4696-A554-3DE66D272862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

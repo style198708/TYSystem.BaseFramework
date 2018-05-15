@@ -1,59 +1,36 @@
-﻿using log4net;
-using log4net.Config;
-using log4net.Repository;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
+using System.Text;
+using NLog;
 using System.Collections.Concurrent;
-using System.IO;
-using System.Reflection;
 using System.Xml;
+using System.Reflection;
+using System.IO;
+using NLog.Config;
 
-namespace TYSystem.BaseFramework.Logging.Log4Net
+namespace TYSystem.BaseFramework.Logging.NLog
 {
-
-    /// <summary>
-    /// The log4net provider class.
-    /// </summary>
-    public class Log4NetProvider : ILoggerProvider
+    public class NLogProvider : Microsoft.Extensions.Logging.ILoggerProvider
     {
-        /// <summary>
-        /// The log4net repository.
-        /// </summary>
-        private ILoggerRepository loggerRepository;
-
         /// <summary>
         /// The loggers collection.
         /// </summary>
-        private readonly ConcurrentDictionary<string, Log4NetLogger> loggers = new ConcurrentDictionary<string, Log4NetLogger>();
+        private readonly ConcurrentDictionary<string, NLogLogger> loggers = new ConcurrentDictionary<string, NLogLogger>();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Log4NetProvider"/> class.
-        /// </summary>
-        /// <param name="log4NetConfigFile">The log4NetConfigFile.</param>
-        public Log4NetProvider(string log4NetConfigFile)
+        public NLogProvider(string configFile)
         {
-            loggerRepository = LogManager.CreateRepository(Assembly.GetEntryAssembly() ?? GetCallingAssemblyFromStartup(),
-                                                           typeof(log4net.Repository.Hierarchy.Hierarchy));
-            XmlConfigurator.Configure(loggerRepository, Parselog4NetConfigFile(log4NetConfigFile));
+            LogManager.LoadConfiguration(configFile);
         }
 
-        /// <summary>
-        /// Creates the logger.
-        /// </summary>
-        /// <param name="categoryName">The category name.</param>
-        /// <returns>The <see cref="ILogger"/> instance.</returns>
-        public ILogger CreateLogger(string categoryName)
-            => this.loggers.GetOrAdd(categoryName, this.CreateLoggerImplementation);
+        public Microsoft.Extensions.Logging.ILogger CreateLogger(string categoryName)
+          => this.loggers.GetOrAdd(categoryName, this.CreateLoggerImplementation);
 
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>
         public void Dispose()
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
-
         /// <summary>
         /// Releases unmanaged and - optionally - managed resources.
         /// </summary>
@@ -66,13 +43,12 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
 
             this.loggers.Clear();
         }
-
         /// <summary>
         /// Parses log4net config file.
         /// </summary>
         /// <param name="filename">The filename.</param>
         /// <returns>The <see cref="XmlElement"/> with the log4net XML element.</returns>
-        private static XmlElement Parselog4NetConfigFile(string filename)
+        private static XmlElement ParsenlogConfigFile(string filename)
         {
             using (FileStream fp = File.OpenRead(filename))
             {
@@ -81,13 +57,12 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
                     DtdProcessing = DtdProcessing.Prohibit
                 };
 
-                var log4netConfig = new XmlDocument();
+                var Config = new XmlDocument();
                 using (var reader = XmlReader.Create(fp, settings))
                 {
-                    log4netConfig.Load(reader);
+                    Config.Load(reader);
                 }
-
-                return log4netConfig["log4net"];
+                return Config["nlog"];
             }
         }
 
@@ -96,8 +71,8 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
         /// </summary>
         /// <param name="name">The name.</param>
         /// <returns>The <see cref="Log4NetLogger"/> instance.</returns>
-        private Log4NetLogger CreateLoggerImplementation(string name)
-            => new Log4NetLogger(loggerRepository.Name, name);
+        private NLogLogger CreateLoggerImplementation(string name)
+            => new NLogLogger(name);
 
         /// <summary>
         /// Tries to retrieve the assembly from a "Startup" type found in the stacktrace.
@@ -117,9 +92,7 @@ namespace TYSystem.BaseFramework.Logging.Log4Net
                     return type.Assembly;
                 }
             }
-
-            return null;
-
+           return null;
         }
     }
 }
