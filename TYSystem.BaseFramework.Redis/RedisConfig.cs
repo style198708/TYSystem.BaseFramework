@@ -55,9 +55,9 @@ namespace TYSystem.BaseFramework.Common.Redis
                             {
                                 _instance = GetManager();
                             }
-                            catch (Exception ex)
+                            catch 
                             {
-                                //Logger.RedisError("初始化Redis缓存错误:" + ex.Message);
+                                
                                 return null;
 
                             }

@@ -49,8 +49,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logging.NLog", "TYSystem.BaseFramework.Logging.NLog\TYSystem.BaseFramework.Logging.NLog.csproj", "{B0C8C55A-42B7-4696-A554-3DE66D272862}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.DapperORM", "TYSystem.BaseFramework.DapperORM\TYSystem.BaseFramework.DapperORM.csproj", "{A5276AE8-4160-4250-9229-C4F19F388EDD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Dapper", "TYSystem.BaseFramework.Dapper\TYSystem.BaseFramework.Dapper.csproj", "{C15BE3A3-FF62-4B60-8C7D-FE391D84D5EE}"
 EndProject
 Global
@@ -151,10 +149,6 @@ Global
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C15BE3A3-FF62-4B60-8C7D-FE391D84D5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C15BE3A3-FF62-4B60-8C7D-FE391D84D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C15BE3A3-FF62-4B60-8C7D-FE391D84D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU

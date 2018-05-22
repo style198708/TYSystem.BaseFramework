@@ -30,8 +30,4 @@
     <Folder Include="FileUpload\" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /V &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Lib\&quot;" />
-  </Target>
-
 </Project>

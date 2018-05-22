@@ -1008,7 +1008,7 @@ namespace TYSystem.BaseFramework.Common.Redis
                 var database = _conn.GetDatabase(DbNum);
                 return func(database);
             }
-            catch (Exception ex)
+            catch
             {
                 //Logger.RedisError("操作Redis异常:" + ex.Message);
                 return default(T);

@@ -9,8 +9,4 @@
     <ProjectReference Include="..\TYSystem.BaseFramework.Extension\TYSystem.BaseFramework.Extension.csproj" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /V &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Lib\&quot;" />
-  </Target>
-
 </Project>
