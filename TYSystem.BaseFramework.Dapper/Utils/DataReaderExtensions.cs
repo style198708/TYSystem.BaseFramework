@@ -4,7 +4,7 @@ using System.Data;
 using System.Reflection;
 using System.Reflection.Emit;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
     /// <summary>
     /// DataReader Extensions

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
+using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.Sql;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     public static class Predicates
     {

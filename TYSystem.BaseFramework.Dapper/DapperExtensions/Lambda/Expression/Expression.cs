@@ -1,12 +1,12 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
-using TYSystem.BaseFramework.Dapper.Utils;
+﻿using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.Sql;
+using TYSystem.BaseFramework.Dapper.ValueObject;
+using TYSystem.BaseFramework.Dapper;
 using System;
 using System.Collections.Generic;
 
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     [Serializable]
     public class Expression

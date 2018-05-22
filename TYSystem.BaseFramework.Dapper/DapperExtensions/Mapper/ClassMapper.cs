@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Mapper
+namespace TYSystem.BaseFramework.Dapper.Mapper
 {
     public interface IClassMapper
     {

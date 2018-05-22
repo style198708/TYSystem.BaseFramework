@@ -16,7 +16,7 @@ using MySql.Data.MySqlClient;
 
 using System.Data.Common;
 
-namespace TYSystem.BaseFramework.Dapper.MySqlDHelper
+namespace TYSystem.BaseFramework.Dapper.MySqlDBHelper
 {
     /// <summary>
     /// 封装数据库的基本操作 

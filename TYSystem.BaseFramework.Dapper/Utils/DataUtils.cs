@@ -1,12 +1,10 @@
-﻿using TYSystem.BaseFramework.DapperExtensions;
-using TYSystem.BaseFramework.DapperExtensions.Lambda;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
-using System;
+﻿using System;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading;
+using TYSystem.BaseFramework.Dapper.Lambda;
+using TYSystem.BaseFramework.Dapper.ValueObject;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
 
     /// <summary>

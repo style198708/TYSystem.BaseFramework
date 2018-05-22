@@ -1,13 +1,11 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
-using TYSystem.BaseFramework.Dapper.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.ValueObject;
 
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     [Serializable]
     public class Field : PropertyMap

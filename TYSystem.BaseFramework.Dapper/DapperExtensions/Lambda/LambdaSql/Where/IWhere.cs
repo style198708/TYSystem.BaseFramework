@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     public interface IWhere<T> : IWhere where T : class
     {

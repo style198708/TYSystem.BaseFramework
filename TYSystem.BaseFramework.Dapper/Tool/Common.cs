@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYSystem.BaseFramework.Dapper.Tool
+namespace TYSystem.BaseFramework.Dapper
 {
     internal class Common
     {

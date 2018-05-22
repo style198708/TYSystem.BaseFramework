@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     public class GetMultiplePredicate
     {

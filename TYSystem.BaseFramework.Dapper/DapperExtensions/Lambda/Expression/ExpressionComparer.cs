@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Collections;
 using System.Collections.ObjectModel;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     public class ExpressionComparer : IComparer<System.Linq.Expressions.Expression>
     {

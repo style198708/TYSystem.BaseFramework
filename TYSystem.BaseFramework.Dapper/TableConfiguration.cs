@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 namespace TYSystem.BaseFramework.Dapper
 {
     /// <summary>
+    /// 
+    /// </summary>
+    public class DapperConfig
+    {
+        public List<TableConfiguration> TableConfigurations { get; set; }
+    }
+
+    /// <summary>
     /// 加载配置文件
     /// </summary>
     public class TableConfiguration

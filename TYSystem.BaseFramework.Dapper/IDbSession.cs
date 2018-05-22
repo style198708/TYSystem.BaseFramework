@@ -1,6 +1,4 @@
-﻿
-using TYSystem.BaseFramework.Dapper.Utils;
-using System;
+﻿using System;
 using System.Data;
 
 namespace TYSystem.BaseFramework.Dapper

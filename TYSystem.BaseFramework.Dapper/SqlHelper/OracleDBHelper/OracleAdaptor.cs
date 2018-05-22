@@ -1,13 +1,9 @@
-﻿using TYSystem.BaseFramework.Dapper.Utils;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Data.OracleClient;
+using TYSystem.BaseFramework.Dapper.PageHelper;
 //using Oracle.DataAccess.Client;
-using System.Linq;
-using System.Text;
 
 namespace TYSystem.BaseFramework.Dapper.OracleDBHelper
 {
@@ -50,7 +46,9 @@ namespace TYSystem.BaseFramework.Dapper.OracleDBHelper
         /// <returns></returns>
         public string GetPagingSql(int pageIndex, int pageSize, string selectSql, string sqlCount, string orderBy)
         {
-            return PageHelper.GetPagingSql(pageIndex, pageSize, selectSql, sqlCount, orderBy);
+
+
+            return TYSystem.BaseFramework.Dapper.PageHelper.PageHelper.GetPagingSql(pageIndex, pageSize, selectSql, sqlCount, orderBy);
         }
 
         #region 事务

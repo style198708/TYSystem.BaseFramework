@@ -1,6 +1,6 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Lambda;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
+﻿using TYSystem.BaseFramework.Dapper.Lambda;
+using TYSystem.BaseFramework.Dapper.Sql;
+using TYSystem.BaseFramework.Dapper.ValueObject;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Mapper
+namespace TYSystem.BaseFramework.Dapper.Mapper
 {
     /// <summary>
     /// Maps an entity property to its corresponding column in the database.

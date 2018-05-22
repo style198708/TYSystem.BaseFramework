@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYSystem.BaseFramework.DapperExtensions.ValueObject
+namespace TYSystem.BaseFramework.Dapper.ValueObject
 {
     public enum ColumnFunction
     {

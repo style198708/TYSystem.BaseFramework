@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TYSystem.BaseFramework.Dapper
+namespace TYSystem.BaseFramework.Dapper.PageHelper
 {
     public class PageHelper
     {

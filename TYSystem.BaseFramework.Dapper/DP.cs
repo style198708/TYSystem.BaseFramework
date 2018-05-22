@@ -1,21 +1,16 @@
-﻿using TYSystem.BaseFramework.Dapper.Tool;
-using TYSystem.BaseFramework.DapperExtensions;
-using TYSystem.BaseFramework.DapperExtensions.Lambda;
+﻿
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Linq;
+using TYSystem.BaseFramework.Dapper.Lambda;
 
 namespace TYSystem.BaseFramework.Dapper
 {
     public class DP
     {
-        public static List<TableConfiguration> config { get; set; }
+        public static DapperConfig config { get; set; }
 
         /// <summary>
         /// 初始化配置
@@ -25,7 +20,7 @@ namespace TYSystem.BaseFramework.Dapper
             if (config == null)
             {
 
-                config = Configuration.Config.Bind<List<TableConfiguration>>("TableConfig.json");
+                config = Configuration.Config.Bind<DapperConfig>("TableConfig.json");
 ;                //config = (List<TableConfiguration>)SerializerXml.LoadSettings(@"E:\01技术研究\ORM\TYSystem.Dapper\Dapper.Test\bin\Debug\TableConfig.xml", typeof(List<TableConfiguration>));
             }
         }
@@ -39,7 +34,7 @@ namespace TYSystem.BaseFramework.Dapper
             Type type = typeof(T);
 
             TableMapping map = type.GetCustomAttributes(typeof(TableMapping), false)[0] as TableMapping;
-            TableConfiguration table = config.Where(p => p.Name == map.ConfigName).FirstOrDefault();
+            TableConfiguration table = config.TableConfigurations.Where(p => p.Name == map.ConfigName).FirstOrDefault();
 
             DataBaseType BaseType;
             IDbConnection connection;

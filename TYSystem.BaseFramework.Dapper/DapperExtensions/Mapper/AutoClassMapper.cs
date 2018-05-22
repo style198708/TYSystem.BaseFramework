@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Mapper
+namespace TYSystem.BaseFramework.Dapper.Mapper
 {
     /// <summary>
     /// Automatically maps an entity to a table using a combination of reflection and naming conventions for keys.
@@ -14,7 +14,7 @@ namespace TYSystem.BaseFramework.DapperExtensions.Mapper
         {
             Type type = typeof(T);
             Table(type.Name);
-            AutoMap();
+            AutoMap(); 
         }
     }
 }

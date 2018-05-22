@@ -4,12 +4,12 @@ using System.Data;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.Lambda;
+using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.Sql;
+using TYSystem.BaseFramework.Dapper.Lambda;
 using TYSystem.BaseFramework.Dapper;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     public interface IDapperImplementor
     {

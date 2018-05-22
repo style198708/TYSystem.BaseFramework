@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using TYSystem.BaseFramework.Dapper;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
     public class MySqlDialect : SqlDialectBase
     {

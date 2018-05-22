@@ -2,7 +2,7 @@
 using System.Text;
 using TYSystem.BaseFramework.Dapper;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
     public class OracleDialect : SqlDialectBase
     {

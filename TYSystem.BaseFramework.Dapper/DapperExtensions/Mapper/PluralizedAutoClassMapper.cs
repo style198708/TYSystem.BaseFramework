@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Text.RegularExpressions;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Mapper
+namespace TYSystem.BaseFramework.Dapper.Mapper
 {
     /// <summary>
     /// Automatically maps an entity to a table using a combination of reflection and naming conventions for keys. 

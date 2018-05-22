@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using TYSystem.BaseFramework.Dapper;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     public interface IMultipleResultReader
     {

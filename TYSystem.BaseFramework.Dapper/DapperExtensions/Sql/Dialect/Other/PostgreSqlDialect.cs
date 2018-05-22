@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
     public class PostgreSqlDialect : SqlDialectBase
     {

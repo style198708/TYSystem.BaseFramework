@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
     public class SqlCeDialect : SqlDialectBase
     {

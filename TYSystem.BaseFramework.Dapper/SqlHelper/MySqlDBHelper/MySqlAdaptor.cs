@@ -1,14 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using TYSystem.BaseFramework.Dapper.Tool;
-using TYSystem.BaseFramework.Dapper.MySqlDHelper;
-using MySql.Data.MySqlClient;
-using TYSystem.BaseFramework.Dapper.Utils;
 
 namespace TYSystem.BaseFramework.Dapper.MySqlDBHelper
 {
@@ -48,7 +41,7 @@ namespace TYSystem.BaseFramework.Dapper.MySqlDBHelper
         /// <returns></returns>
         public string GetPagingSql(int pageIndex, int pageSize, string selectSql, string sqlCount, string orderBy)
         {
-            return PageHelper.GetPagingSql(pageIndex, pageSize, selectSql, sqlCount, orderBy);
+            return TYSystem.BaseFramework.Dapper.PageHelper.PageHelper.GetPagingSql(pageIndex, pageSize, selectSql, sqlCount, orderBy);
         }
 
         #region 事务

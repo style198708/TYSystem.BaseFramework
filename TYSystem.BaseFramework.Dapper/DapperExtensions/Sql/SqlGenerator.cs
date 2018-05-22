@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.Dapper;
-using TYSystem.BaseFramework.DapperExtensions.Lambda;
+using TYSystem.BaseFramework.Dapper.Lambda;
+using TYSystem.BaseFramework.Dapper.Mapper;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
 
     public interface ISqlGenerator

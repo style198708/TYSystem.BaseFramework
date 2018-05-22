@@ -1,4 +1,4 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Sql;
+﻿using TYSystem.BaseFramework.Dapper.Sql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     internal static class ReflectionHelper
     {

@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
+using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.Sql;
 using TYSystem.BaseFramework.Dapper;
-using TYSystem.BaseFramework.DapperExtensions.Lambda;
+using TYSystem.BaseFramework.Dapper.Lambda;
 using System.Collections.Concurrent;
 using System.Configuration;
-using TYSystem.BaseFramework.Dapper.Utils;
 
-namespace TYSystem.BaseFramework.DapperExtensions
+namespace TYSystem.BaseFramework.Dapper
 {
     public static class DapperExtension
     {

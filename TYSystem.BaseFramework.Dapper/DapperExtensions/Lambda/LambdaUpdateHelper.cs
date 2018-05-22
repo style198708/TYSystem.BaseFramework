@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Linq;
 using System.Linq.Expressions;
+using TYSystem.BaseFramework.Dapper.Mapper;
 
-using TYSystem.BaseFramework.Dapper;
-using TYSystem.BaseFramework.DapperExtensions;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
-using System.Configuration;
-using TYSystem.BaseFramework.Dapper.Utils;
-
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
 
 

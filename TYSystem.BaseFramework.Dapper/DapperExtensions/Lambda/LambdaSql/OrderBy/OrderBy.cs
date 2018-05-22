@@ -1,4 +1,4 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.ValueObject;
+﻿using TYSystem.BaseFramework.Dapper.ValueObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     [Serializable]
     public class OrderBy<T> : OrderBy, IOrderBy<T> where T : class

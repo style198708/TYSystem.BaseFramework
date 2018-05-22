@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
 
     /// <summary>

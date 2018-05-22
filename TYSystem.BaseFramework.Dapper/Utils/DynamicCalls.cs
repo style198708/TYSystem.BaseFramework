@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
     /// <summary>
     /// 

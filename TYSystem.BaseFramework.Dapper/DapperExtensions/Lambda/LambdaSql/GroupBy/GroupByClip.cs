@@ -1,11 +1,11 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Mapper;
+﻿using TYSystem.BaseFramework.Dapper.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     /// <summary>
     /// 分组

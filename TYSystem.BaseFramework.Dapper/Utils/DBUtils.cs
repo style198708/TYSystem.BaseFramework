@@ -1,11 +1,11 @@
-﻿using TYSystem.BaseFramework.DapperExtensions.Lambda;
+﻿using TYSystem.BaseFramework.Dapper.Lambda;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
     public class DBUtils
     {

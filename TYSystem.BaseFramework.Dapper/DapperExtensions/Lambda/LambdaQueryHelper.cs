@@ -7,14 +7,13 @@ using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using TYSystem.BaseFramework.Dapper;
-using TYSystem.BaseFramework.DapperExtensions;
-using TYSystem.BaseFramework.DapperExtensions.Mapper;
-using TYSystem.BaseFramework.DapperExtensions.Sql;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
+using TYSystem.BaseFramework.Dapper.Mapper;
+using TYSystem.BaseFramework.Dapper.Sql;
+using TYSystem.BaseFramework.Dapper.ValueObject;
 using System.Configuration;
-using TYSystem.BaseFramework.Dapper.Utils;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     public class LambdaQueryHelper<T> : LambdaQueryHelper where T : class
     {

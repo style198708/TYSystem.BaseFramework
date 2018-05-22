@@ -5,7 +5,7 @@ using System.Text;
 using System.Linq.Expressions;
 using System.Threading;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Lambda
+namespace TYSystem.BaseFramework.Dapper.Lambda
 {
     public class HashedListCache<T> : IExpressionCache<T> where T : class
     {

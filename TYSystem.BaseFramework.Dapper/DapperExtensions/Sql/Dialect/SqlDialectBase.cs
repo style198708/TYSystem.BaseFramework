@@ -1,11 +1,11 @@
 ﻿using TYSystem.BaseFramework.Dapper;
-using TYSystem.BaseFramework.DapperExtensions.ValueObject;
+using TYSystem.BaseFramework.Dapper.ValueObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TYSystem.BaseFramework.DapperExtensions.Sql
+namespace TYSystem.BaseFramework.Dapper.Sql
 {
     public interface ISqlDialect
     {

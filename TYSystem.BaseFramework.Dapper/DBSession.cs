@@ -1,9 +1,5 @@
-﻿using TYSystem.BaseFramework.Dapper.Utils;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.Linq;
-using System.Text;
 
 namespace TYSystem.BaseFramework.Dapper
 {

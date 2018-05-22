@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TYSystem.BaseFramework.Dapper.Utils
+namespace TYSystem.BaseFramework.Dapper
 {
     /// <summary>
     /// 标示该属性是（或不是）数据列
