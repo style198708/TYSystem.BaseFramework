@@ -45,11 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.DotNetty", "TYSystem.BaseFramework.DotNetty\TYSystem.BaseFramework.DotNetty.csproj", "{E2865AAD-E8BE-421D-99C5-892C0ABDEEB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Dapper", "TYSystem.BaseFramework.Dapper\TYSystem.BaseFramework.Dapper.csproj", "{1C01CBBD-8041-46AD-A414-35829CEF115B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logging.Log4Net", "TYSystem.BaseFramework.Logging.Log4Net\TYSystem.BaseFramework.Logging.Log4Net.csproj", "{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Logging.Log4Net", "TYSystem.BaseFramework.Logging.Log4Net\TYSystem.BaseFramework.Logging.Log4Net.csproj", "{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.Logging.NLog", "TYSystem.BaseFramework.Logging.NLog\TYSystem.BaseFramework.Logging.NLog.csproj", "{B0C8C55A-42B7-4696-A554-3DE66D272862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TYSystem.BaseFramework.Logging.NLog", "TYSystem.BaseFramework.Logging.NLog\TYSystem.BaseFramework.Logging.NLog.csproj", "{B0C8C55A-42B7-4696-A554-3DE66D272862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TYSystem.BaseFramework.DapperORM", "TYSystem.BaseFramework.DapperORM\TYSystem.BaseFramework.DapperORM.csproj", "{A5276AE8-4160-4250-9229-C4F19F388EDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,10 +141,6 @@ Global
 		{E2865AAD-E8BE-421D-99C5-892C0ABDEEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2865AAD-E8BE-421D-99C5-892C0ABDEEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2865AAD-E8BE-421D-99C5-892C0ABDEEB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C01CBBD-8041-46AD-A414-35829CEF115B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A2F488D-CF19-4C55-B15B-72F1EC790EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -153,6 +149,10 @@ Global
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0C8C55A-42B7-4696-A554-3DE66D272862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5276AE8-4160-4250-9229-C4F19F388EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
